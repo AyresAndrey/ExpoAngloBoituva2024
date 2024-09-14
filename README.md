@@ -1,1 +1,5 @@
-# ExpoAngloBoituva2024
+# Expo Anglo Boituva 2024 
+
+Aluna: Sophia
+
+Projetos: Sensor de PH
