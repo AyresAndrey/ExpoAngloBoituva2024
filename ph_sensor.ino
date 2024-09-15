@@ -16,7 +16,6 @@ float tensao;               // Variável para conversão em tensão
 float temperatura;          // Variável para temperatura
 float soma_temperatura;
 float media_temperatura;
-unsigned long tempo;        // Float tempo
 
 void setup() {
   Serial.begin(9600);
@@ -38,8 +37,6 @@ void loop() {
   while (contagem < 10) {                   // Executa enquanto contagem menor que 10
     lcd.setCursor(15,1);                    // Mostra indicador de leitura 
     lcd.print("*");     
-
-    tempo = millis();                       // Define o tempo em microssegundos
     
     entrada_A0 = analogRead(A0);            // Lê a entrada analógica
     entrada_A1 = analogRead(A1);            // Lê a entrada analógica
