@@ -33,7 +33,7 @@ void loop() {
     int analogA1 = analogRead(A1);
 
     float voltagePH = analogA0 * Vref / 1024.0;
-    float temperatureF = analogA1 * 1030.0 / (1024.0 * 10.0); // Temperatura em Fahrenheit
+    float temperatureF = analogA1 * 950.0 / (1024.0 * 10.0); // Temperatura em Fahrenheit
     
     sumVoltagePH += voltagePH;
     sumTemperature += temperatureF;
@@ -43,7 +43,7 @@ void loop() {
   float avgTemperature = sumTemperature / numReadings;
 
   float temperatureC = (avgTemperature - 32) * fahrenheitToCelsius; // Conversão para Celsius
-  float pH = 7 + ((2.5 - avgVoltagePH) / 0.18); // Verificar a fórmula do pH
+  float pH = 7 + ((2.4 - avgVoltagePH) / 0.18); // Converte para pH
 
   lcd.setCursor(6,1); //Limpa duas posições a partir da 6 na segunda linha, remove informação de inicialização
   lcd.print("  ");
